@@ -1,15 +1,25 @@
 <?php 
-class Aldeano implements Recolector {
+abstract class Aldeano implements Recolector {
 
     use PuedoRecolectar;
     private $velocidadRecoleccion;
     private $nombre;
     private $apellido;
+    private $bonus;
 
-    public function __construct($nombre,$apellido) {
+    public function __construct($nombre,$apellido,$bonus) {
         $this->velocidadRecoleccion = 18;
         $this->nombre=$nombre;
         $this->apellido=$apellido;
+        $this->bonus=$bonus;
+    }
+
+    public function getBonus() {
+        return $this->bonus;
+    }
+
+    public function setBonus($bonus) {
+        $this->bonus= $bonus;
     }
 
     public function getNombre() {
@@ -38,4 +48,17 @@ class Aldeano implements Recolector {
 
 }
 
+class AldeanoChino extends Aldeano{
+
+    public function __construct($nombre,$apellido){
+        parent::__construct($nombre,$apellido,null);
+    }
+}
+
+class AldeanoFranco extends Aldeano{
+
+    public function __construct($nombre,$apellido){
+        parent::__construct($nombre,$apellido,25);
+    }
+}
 ?>
