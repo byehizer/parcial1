@@ -47,7 +47,6 @@ abstract class Aldeano implements Recolector {
 
         public function recolectar(Recolectable $recolectable) : String {
         $tiempo=0;
-        if(isset($Recolector->bonus)){
             if($this->getBonus()==null){
                 $tiempo = ceil($recolectable->getAlimento() / $this->getVelocidadRecoleccion());
             }
@@ -55,7 +54,7 @@ abstract class Aldeano implements Recolector {
                 $velocidad=$this->getVelocidadRecoleccion()+($this->getVelocidadRecoleccion()*($this->getBonus()/100));
                 $tiempo = ceil($recolectable->getAlimento() / $velocidad);
             }
-        }
+        
         return "Yo ".$this->getNombre()." ".$this->getApellido()." recolecté todo el alimento en $tiempo minutos.";
     }
 }
