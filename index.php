@@ -5,20 +5,6 @@ require_once('aldeano.php');
 require_once('bancodepesca.php');
 require_once('pesquero.php');
 
-$arbusto=new Arbusto();
-$arbusto2=new Arbusto();
-$aldeano= new AldeanoChino("Juan","Abreu");
-$aldeano2= new AldeanoFranco("Marco","Polo");
-
-/*/ $aldeano->recolectar($arbusto);
-$aldeano2->recolectar($arbusto2);
-
-$pesquero = new Pesquero("Panchito", "Pérez");
-echo "<br>";
-$bancoDePesca = new BancoDePesca();
-+
-$pesquero->recolectar($bancoDePesca);/*/
-
 ?>
 
 <!DOCTYPE html>
