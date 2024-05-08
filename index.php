@@ -61,7 +61,7 @@ $pesquero->recolectar($bancoDePesca);/*/
     <div class="row justify-content-center">
         <div class="col-6 transparent-bg margenprimero">
                 <h1>Proyecto Aldeanos 1.0</h1>
-                <p>Bienvenido al proyecto aldeanos, aqui podra ver que tan rapido puede recolectar los diferentes tipos de aldeanos los arbustos del AGE OF EMPIRE, asi como tambien buscar la Informacion
+                <p> Aqui podra ver que tan rapido puede recolectar los diferentes tipos de aldeanos los arbustos del AGE OF EMPIRE, asi como tambien buscar la Informacion
                     de que tan rapido puede recolectar los pesqueros los banco de pesca
                 </p>
         </div>

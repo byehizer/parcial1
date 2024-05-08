@@ -1,6 +1,6 @@
 <?php
 
-trait PuedoRecolectar {
+/*/trait PuedoRecolectar {
     public function recolectar(Recolectable $recolectable) : String {
         $tiempo=0;
         if(isset($Recolector->bonus)){
@@ -24,7 +24,7 @@ trait TengoComida {
     public function getAlimento(): int {
         return $this->cantidadAlimento; 
     }
-}
+}/*/
 interface Recolector {
     public function recolectar(Recolectable $recolectable);
 }

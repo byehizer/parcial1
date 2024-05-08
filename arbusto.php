@@ -1,7 +1,6 @@
 <?php 
 
 class Arbusto implements Recolectable{
-    use TengoComida;
     private $cantidadAlimento;
 
   
@@ -9,7 +8,9 @@ class Arbusto implements Recolectable{
      
         $this->cantidadAlimento = 125;
     }
-
+    public function getAlimento(): int {
+        return $this->cantidadAlimento; 
+    }
 }
 
 ?>

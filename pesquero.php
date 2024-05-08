@@ -2,7 +2,6 @@
 
 class Pesquero implements Recolector{
 
-    use PuedoRecolectar;
     private $nombre;
     private $apellido;
     private $velocidadRecoleccion;
@@ -35,6 +34,13 @@ class Pesquero implements Recolector{
 
     public function setVelocidadRecoleccion($velocidadRecoleccion) {
         $this->velocidadRecoleccion = $velocidadRecoleccion;
+    }
+    public function recolectar(Recolectable $recolectable) : String {
+        $tiempo=0;
+        $tiempo = ceil($recolectable->getAlimento() / $this->getVelocidadRecoleccion());
+        
+
+        return "Yo ".$this->getNombre()." ".$this->getApellido()." recolecté todo el alimento en $tiempo minutos.";
     }
 }                                                                                                   
 ?>

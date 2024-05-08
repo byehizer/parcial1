@@ -1,7 +1,6 @@
 <?php 
 abstract class Aldeano implements Recolector {
 
-    use PuedoRecolectar;
     private $velocidadRecoleccion;
     private $nombre;
     private $apellido;
@@ -46,6 +45,19 @@ abstract class Aldeano implements Recolector {
         $this->velocidadRecoleccion = $velocidadRecoleccion;
     }
 
+        public function recolectar(Recolectable $recolectable) : String {
+        $tiempo=0;
+        if(isset($Recolector->bonus)){
+            if($this->getBonus()==null){
+                $tiempo = ceil($recolectable->getAlimento() / $this->getVelocidadRecoleccion());
+            }
+            else{
+                $velocidad=$this->getVelocidadRecoleccion()+($this->getVelocidadRecoleccion()*($this->getBonus()/100));
+                $tiempo = ceil($recolectable->getAlimento() / $velocidad);
+            }
+        }
+        return "Yo ".$this->getNombre()." ".$this->getApellido()." recolecté todo el alimento en $tiempo minutos.";
+    }
 }
 
 class AldeanoChino extends Aldeano{
